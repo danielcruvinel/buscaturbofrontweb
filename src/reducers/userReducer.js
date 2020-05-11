@@ -1,11 +1,14 @@
 const initialState = {
-  email: "",
+  name: "Daniel",
 };
 
-export default (state = initialState, action) => {
-  if (action.type === "SET_EMAIL") {
-    return { ...state, email: action.payload.email };
+const userReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "SET_NAME":
+      return { ...state, name: action.payload.name };
+    default:
+      break;
   }
-
   return state;
 };
+export default userReducer;
