@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Home from "./pages/Home/";
 import Sobre from "./pages/Sobre/";
+import NotFound from "./pages/NotFound";
 
 export default () => {
   return (
@@ -10,8 +11,11 @@ export default () => {
       <Route exact path="/">
         <Home />
       </Route>
-      <Route exact path="/sobre">
+      <Route path="/sobre">
         <Sobre />
+      </Route>
+      <Route>
+        <NotFound />
       </Route>
     </Switch>
   );

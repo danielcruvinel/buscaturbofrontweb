@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { isLogged } from "../../helpers/authHandler";
 
 function Home() {
+  let logged = isLogged();
+
   // Pegar nome no reducer
   const name = useSelector((state) => state.user.name);
   // Função alterar no reducer
@@ -14,6 +17,12 @@ function Home() {
       payload: { name: "Nico" },
     });
   };
+  const limpar = () => {
+    dispatch({
+      type: "SET_NAME",
+      payload: { name: "" },
+    });
+  };
 
   return (
     <>
@@ -21,6 +30,14 @@ function Home() {
       <Link to="/sobre">Sobre</Link>
       <p>Nome armazenado: {name} </p>
       <button onClick={addName}>ADD</button>
+      <br />
+      <br />
+      <button onClick={limpar}>Limpar</button>
+      <br />
+      <br />
+      <br />
+      {logged && <>LOGADO</>}
+      {!logged && <>NÂO LOGADO</>}
     </>
   );
 }
