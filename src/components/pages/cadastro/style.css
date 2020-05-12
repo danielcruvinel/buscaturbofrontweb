@@ -1,0 +1,19 @@
+#img {
+  width: 55%;
+  margin: auto;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+@media (max-width: 771px) {
+  #img {
+    width: 60%;
+    height: 60%;
+    margin: auto;
+  }
+
+  #logo {
+    max-width: 240px;
+    margin: auto;
+  }
+}

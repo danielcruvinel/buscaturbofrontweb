@@ -1,0 +1,33 @@
+#link {
+  text-decoration: none;
+}
+
+#title {
+  /* padding-top: 35px; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+#desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+#cardimage {
+  height: 130px;
+  width: auto;
+  margin: auto;
+}
+
+@media (max-width: 771px) {
+  #cardimage {
+    width: 100%;
+    height: auto;
+  }
+}

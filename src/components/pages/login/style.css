@@ -1,0 +1,26 @@
+#img {
+  width: 55%;
+  margin: auto;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+@media (min-width: 771px) {
+  #box {
+    max-width: 400px;
+    min-width: 600px;
+    margin: auto;
+  }
+}
+@media (max-width: 771px) {
+  #img {
+    width: 60%;
+    height: 60%;
+    margin: auto;
+  }
+
+  #logo {
+    max-width: 240px;
+    margin: auto;
+  }
+}
